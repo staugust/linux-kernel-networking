@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/aug/linux-kernel-networking && $(CMAKE_COMMAND) -E cmake_progress_start /home/aug/linux-kernel-networking/CMakeFiles /home/aug/linux-kernel-networking/ch2/CMakeFiles/progress.marks
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch2/all
+	cd /home/aug/linux-kernel-networking && $(CMAKE_COMMAND) -E cmake_progress_start /home/aug/linux-kernel-networking/CMakeFiles /home/aug/linux-kernel-networking/ch3/CMakeFiles/progress.marks
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch3/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aug/linux-kernel-networking/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch2/clean
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch3/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,12 +97,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch2/preinstall
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch3/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch2/preinstall
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch3/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -111,88 +111,88 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-ch2/CMakeFiles/client.dir/rule:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch2/CMakeFiles/client.dir/rule
-.PHONY : ch2/CMakeFiles/client.dir/rule
+ch3/CMakeFiles/myping.dir/rule:
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch3/CMakeFiles/myping.dir/rule
+.PHONY : ch3/CMakeFiles/myping.dir/rule
 
 # Convenience name for target.
-client: ch2/CMakeFiles/client.dir/rule
+myping: ch3/CMakeFiles/myping.dir/rule
 
-.PHONY : client
+.PHONY : myping
 
 # fast build rule for target.
-client/fast:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/client.dir/build.make ch2/CMakeFiles/client.dir/build
-.PHONY : client/fast
+myping/fast:
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch3/CMakeFiles/myping.dir/build.make ch3/CMakeFiles/myping.dir/build
+.PHONY : myping/fast
 
 # Convenience name for target.
-ch2/CMakeFiles/server.dir/rule:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch2/CMakeFiles/server.dir/rule
-.PHONY : ch2/CMakeFiles/server.dir/rule
+ch3/CMakeFiles/nping.dir/rule:
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch3/CMakeFiles/nping.dir/rule
+.PHONY : ch3/CMakeFiles/nping.dir/rule
 
 # Convenience name for target.
-server: ch2/CMakeFiles/server.dir/rule
+nping: ch3/CMakeFiles/nping.dir/rule
 
-.PHONY : server
+.PHONY : nping
 
 # fast build rule for target.
-server/fast:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/server.dir/build.make ch2/CMakeFiles/server.dir/build
-.PHONY : server/fast
+nping/fast:
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch3/CMakeFiles/nping.dir/build.make ch3/CMakeFiles/nping.dir/build
+.PHONY : nping/fast
 
-src/client.o: src/client.cc.o
+src/nping.o: src/nping.cc.o
 
-.PHONY : src/client.o
-
-# target to build an object file
-src/client.cc.o:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/client.dir/build.make ch2/CMakeFiles/client.dir/src/client.cc.o
-.PHONY : src/client.cc.o
-
-src/client.i: src/client.cc.i
-
-.PHONY : src/client.i
-
-# target to preprocess a source file
-src/client.cc.i:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/client.dir/build.make ch2/CMakeFiles/client.dir/src/client.cc.i
-.PHONY : src/client.cc.i
-
-src/client.s: src/client.cc.s
-
-.PHONY : src/client.s
-
-# target to generate assembly for a file
-src/client.cc.s:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/client.dir/build.make ch2/CMakeFiles/client.dir/src/client.cc.s
-.PHONY : src/client.cc.s
-
-src/server.o: src/server.cc.o
-
-.PHONY : src/server.o
+.PHONY : src/nping.o
 
 # target to build an object file
-src/server.cc.o:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/server.dir/build.make ch2/CMakeFiles/server.dir/src/server.cc.o
-.PHONY : src/server.cc.o
+src/nping.cc.o:
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch3/CMakeFiles/nping.dir/build.make ch3/CMakeFiles/nping.dir/src/nping.cc.o
+.PHONY : src/nping.cc.o
 
-src/server.i: src/server.cc.i
+src/nping.i: src/nping.cc.i
 
-.PHONY : src/server.i
+.PHONY : src/nping.i
 
 # target to preprocess a source file
-src/server.cc.i:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/server.dir/build.make ch2/CMakeFiles/server.dir/src/server.cc.i
-.PHONY : src/server.cc.i
+src/nping.cc.i:
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch3/CMakeFiles/nping.dir/build.make ch3/CMakeFiles/nping.dir/src/nping.cc.i
+.PHONY : src/nping.cc.i
 
-src/server.s: src/server.cc.s
+src/nping.s: src/nping.cc.s
 
-.PHONY : src/server.s
+.PHONY : src/nping.s
 
 # target to generate assembly for a file
-src/server.cc.s:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/server.dir/build.make ch2/CMakeFiles/server.dir/src/server.cc.s
-.PHONY : src/server.cc.s
+src/nping.cc.s:
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch3/CMakeFiles/nping.dir/build.make ch3/CMakeFiles/nping.dir/src/nping.cc.s
+.PHONY : src/nping.cc.s
+
+src/ping.o: src/ping.cc.o
+
+.PHONY : src/ping.o
+
+# target to build an object file
+src/ping.cc.o:
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch3/CMakeFiles/myping.dir/build.make ch3/CMakeFiles/myping.dir/src/ping.cc.o
+.PHONY : src/ping.cc.o
+
+src/ping.i: src/ping.cc.i
+
+.PHONY : src/ping.i
+
+# target to preprocess a source file
+src/ping.cc.i:
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch3/CMakeFiles/myping.dir/build.make ch3/CMakeFiles/myping.dir/src/ping.cc.i
+.PHONY : src/ping.cc.i
+
+src/ping.s: src/ping.cc.s
+
+.PHONY : src/ping.s
+
+# target to generate assembly for a file
+src/ping.cc.s:
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch3/CMakeFiles/myping.dir/build.make ch3/CMakeFiles/myping.dir/src/ping.cc.s
+.PHONY : src/ping.cc.s
 
 # Help Target
 help:
@@ -201,15 +201,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... client"
+	@echo "... myping"
 	@echo "... rebuild_cache"
-	@echo "... server"
-	@echo "... src/client.o"
-	@echo "... src/client.i"
-	@echo "... src/client.s"
-	@echo "... src/server.o"
-	@echo "... src/server.i"
-	@echo "... src/server.s"
+	@echo "... nping"
+	@echo "... src/nping.o"
+	@echo "... src/nping.i"
+	@echo "... src/nping.s"
+	@echo "... src/ping.o"
+	@echo "... src/ping.i"
+	@echo "... src/ping.s"
 .PHONY : help
 
 

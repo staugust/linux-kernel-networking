@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aug/linux-kernel-networking/CMakeFiles /home/aug/linux-kernel-networking/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/aug/linux-kernel-networking && $(CMAKE_COMMAND) -E cmake_progress_start /home/aug/linux-kernel-networking/CMakeFiles /home/aug/linux-kernel-networking/ch4/CMakeFiles/progress.marks
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch4/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aug/linux-kernel-networking/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch4/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,83 +97,18 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch4/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch4/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/aug/linux-kernel-networking && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named client
-
-# Build rule for target.
-client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 client
-.PHONY : client
-
-# fast build rule for target.
-client/fast:
-	$(MAKE) -f ch2/CMakeFiles/client.dir/build.make ch2/CMakeFiles/client.dir/build
-.PHONY : client/fast
-
-#=============================================================================
-# Target rules for targets named server
-
-# Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 server
-.PHONY : server
-
-# fast build rule for target.
-server/fast:
-	$(MAKE) -f ch2/CMakeFiles/server.dir/build.make ch2/CMakeFiles/server.dir/build
-.PHONY : server/fast
-
-#=============================================================================
-# Target rules for targets named myping
-
-# Build rule for target.
-myping: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 myping
-.PHONY : myping
-
-# fast build rule for target.
-myping/fast:
-	$(MAKE) -f ch3/CMakeFiles/myping.dir/build.make ch3/CMakeFiles/myping.dir/build
-.PHONY : myping/fast
-
-#=============================================================================
-# Target rules for targets named nping
-
-# Build rule for target.
-nping: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nping
-.PHONY : nping
-
-# fast build rule for target.
-nping/fast:
-	$(MAKE) -f ch3/CMakeFiles/nping.dir/build.make ch3/CMakeFiles/nping.dir/build
-.PHONY : nping/fast
-
-#=============================================================================
-# Target rules for targets named unsharepid
-
-# Build rule for target.
-unsharepid: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 unsharepid
-.PHONY : unsharepid
-
-# fast build rule for target.
-unsharepid/fast:
-	$(MAKE) -f ch14/CMakeFiles/unsharepid.dir/build.make ch14/CMakeFiles/unsharepid.dir/build
-.PHONY : unsharepid/fast
 
 # Help Target
 help:
@@ -183,11 +118,6 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... client"
-	@echo "... server"
-	@echo "... myping"
-	@echo "... nping"
-	@echo "... unsharepid"
 .PHONY : help
 
 
@@ -199,6 +129,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/aug/linux-kernel-networking && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

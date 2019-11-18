@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/aug/linux-kernel-networking
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/aug/clion-2019.2.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -78,16 +67,27 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/aug/clion-2019.2.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/aug/linux-kernel-networking && $(CMAKE_COMMAND) -E cmake_progress_start /home/aug/linux-kernel-networking/CMakeFiles /home/aug/linux-kernel-networking/ch2/CMakeFiles/progress.marks
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch2/all
+	cd /home/aug/linux-kernel-networking && $(CMAKE_COMMAND) -E cmake_progress_start /home/aug/linux-kernel-networking/CMakeFiles /home/aug/linux-kernel-networking/ch14/CMakeFiles/progress.marks
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch14/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aug/linux-kernel-networking/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch2/clean
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch14/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,12 +97,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch2/preinstall
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch14/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch2/preinstall
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch14/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -111,88 +111,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-ch2/CMakeFiles/client.dir/rule:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch2/CMakeFiles/client.dir/rule
-.PHONY : ch2/CMakeFiles/client.dir/rule
+ch14/CMakeFiles/unsharepid.dir/rule:
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch14/CMakeFiles/unsharepid.dir/rule
+.PHONY : ch14/CMakeFiles/unsharepid.dir/rule
 
 # Convenience name for target.
-client: ch2/CMakeFiles/client.dir/rule
+unsharepid: ch14/CMakeFiles/unsharepid.dir/rule
 
-.PHONY : client
+.PHONY : unsharepid
 
 # fast build rule for target.
-client/fast:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/client.dir/build.make ch2/CMakeFiles/client.dir/build
-.PHONY : client/fast
+unsharepid/fast:
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch14/CMakeFiles/unsharepid.dir/build.make ch14/CMakeFiles/unsharepid.dir/build
+.PHONY : unsharepid/fast
 
-# Convenience name for target.
-ch2/CMakeFiles/server.dir/rule:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f CMakeFiles/Makefile2 ch2/CMakeFiles/server.dir/rule
-.PHONY : ch2/CMakeFiles/server.dir/rule
+src/pid.o: src/pid.cc.o
 
-# Convenience name for target.
-server: ch2/CMakeFiles/server.dir/rule
-
-.PHONY : server
-
-# fast build rule for target.
-server/fast:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/server.dir/build.make ch2/CMakeFiles/server.dir/build
-.PHONY : server/fast
-
-src/client.o: src/client.cc.o
-
-.PHONY : src/client.o
+.PHONY : src/pid.o
 
 # target to build an object file
-src/client.cc.o:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/client.dir/build.make ch2/CMakeFiles/client.dir/src/client.cc.o
-.PHONY : src/client.cc.o
+src/pid.cc.o:
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch14/CMakeFiles/unsharepid.dir/build.make ch14/CMakeFiles/unsharepid.dir/src/pid.cc.o
+.PHONY : src/pid.cc.o
 
-src/client.i: src/client.cc.i
+src/pid.i: src/pid.cc.i
 
-.PHONY : src/client.i
-
-# target to preprocess a source file
-src/client.cc.i:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/client.dir/build.make ch2/CMakeFiles/client.dir/src/client.cc.i
-.PHONY : src/client.cc.i
-
-src/client.s: src/client.cc.s
-
-.PHONY : src/client.s
-
-# target to generate assembly for a file
-src/client.cc.s:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/client.dir/build.make ch2/CMakeFiles/client.dir/src/client.cc.s
-.PHONY : src/client.cc.s
-
-src/server.o: src/server.cc.o
-
-.PHONY : src/server.o
-
-# target to build an object file
-src/server.cc.o:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/server.dir/build.make ch2/CMakeFiles/server.dir/src/server.cc.o
-.PHONY : src/server.cc.o
-
-src/server.i: src/server.cc.i
-
-.PHONY : src/server.i
+.PHONY : src/pid.i
 
 # target to preprocess a source file
-src/server.cc.i:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/server.dir/build.make ch2/CMakeFiles/server.dir/src/server.cc.i
-.PHONY : src/server.cc.i
+src/pid.cc.i:
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch14/CMakeFiles/unsharepid.dir/build.make ch14/CMakeFiles/unsharepid.dir/src/pid.cc.i
+.PHONY : src/pid.cc.i
 
-src/server.s: src/server.cc.s
+src/pid.s: src/pid.cc.s
 
-.PHONY : src/server.s
+.PHONY : src/pid.s
 
 # target to generate assembly for a file
-src/server.cc.s:
-	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch2/CMakeFiles/server.dir/build.make ch2/CMakeFiles/server.dir/src/server.cc.s
-.PHONY : src/server.cc.s
+src/pid.cc.s:
+	cd /home/aug/linux-kernel-networking && $(MAKE) -f ch14/CMakeFiles/unsharepid.dir/build.make ch14/CMakeFiles/unsharepid.dir/src/pid.cc.s
+.PHONY : src/pid.cc.s
 
 # Help Target
 help:
@@ -200,16 +158,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... client"
 	@echo "... rebuild_cache"
-	@echo "... server"
-	@echo "... src/client.o"
-	@echo "... src/client.i"
-	@echo "... src/client.s"
-	@echo "... src/server.o"
-	@echo "... src/server.i"
-	@echo "... src/server.s"
+	@echo "... unsharepid"
+	@echo "... edit_cache"
+	@echo "... src/pid.o"
+	@echo "... src/pid.i"
+	@echo "... src/pid.s"
 .PHONY : help
 
 
